@@ -2,38 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="challenge Interactive pricing component of frontendmentor">
+  <meta name="keywords" content="challenge, Interactive pricing, frontendmentor">
+  <meta name="author" content="Cristian Camilo Rodriguez">
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="content">
+    <header class="header">
+      <h1 class="header__title"> Simple, traffic-based pricing</h1>
+      <p class="header__info">Sign-up for our 30-day trial. <br>No credit card required. </p>
+    </header>
+    <section class="card">
+      <p class="card__title">100k Pageviews</p>
+      <input type="range" name="price" id="" class="card__range">
+      <p class="card__price"><span class="card__price-date">$ /month</span></p>
+      <div class="card__billing">
+        <p class="billing__monthly">Monthly Billing</p>
+        <label class="billing__swicth">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <p class="billing__Yearly">Yearly Billing</p>
+        <span class="billing__discount">25%</span>
+      </div>
+      <div class="container__discount">
+        <section class="discount__options">
+          <p class="option"><img src="images/icon-check.svg" alt="">Unlimited websites</p>
+          <p class="option"><img src="images/icon-check.svg" alt="">100% data ownership</p>
+          <p class="option"><img src="images/icon-check.svg" alt="">Email reports</p>
+        </section>
+        <section class="discount__cta">
+          <button class="cta">Start my trial</button>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
