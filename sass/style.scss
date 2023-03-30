@@ -16,8 +16,8 @@ body{
 }
 .content{
   width: 90%;
-  height: 100vh;
-  margin: 0 auto;
+  
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,11 +29,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     text-align: center;
     background-image: url('../images/pattern-circles.svg');
     background-repeat: no-repeat;
     background-position: center;
+    margin: 3rem 0 6rem 0;
     &__title{
       font-size: 3rem;
       color: $dark-desaturated-blue-text-CTA-Bgd;
@@ -45,16 +46,17 @@ body{
     }
   }
   .card{
-    width: 90%;
+    width: 95%;
     max-width: 540px;
     background-color: #fff;
-    padding: 40px;
+    padding: 35px 25px;
     border-radius: 15px;
     box-shadow: 1px 6px 6px 6px #f1f2f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-bottom: 50px;
     &__title{
       font-size: 2rem;
       color: $grayish-blue-text;
@@ -83,7 +85,112 @@ body{
         -webkit-transition: background .15s ease-in-out;
         transition: background .15s ease-in-out;
       }
-      
+    }
+    &__price{
+      font-size: 5rem;
+      font-weight: 800;
+      color: $dark-desaturated-blue-text-CTA-Bgd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6rem;
+      margin-bottom: 6rem;
+      &-date{
+        font-size: 1.6rem;
+        color: $grayish-blue-text;
+        font-weight: normal;
+      }
     } 
+    &__billing{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 6rem;
+      font-size: 1.6rem;
+      color: $grayish-blue-text;
+      gap: 12px;
+      border-bottom: 1px solid $light-grayish-blue-toggle-background;
+    }
+    .billing__swicth{
+      position: relative;
+      width: 50px;
+      height: 30px;
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 6px;
+        bottom: 5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    }
+    .billing__discount{
+      background-color: #fce4df;
+      border-radius: 30px;
+      padding: 3px 8px;
+      color: $light-red-discount-text;
+      font-weight: 800;
+    }
+    .container__discount{
+      margin: 40px 0;
+      .discount__options{
+        margin-bottom: 2rem;
+        .option{
+          padding-bottom: 30px;
+          font-size: 1.4rem;
+          color:  $grayish-blue-text;
+          .check{
+            padding-right: 15px;
+          }        
+        }
+      }
+      .discount__cta{
+        .cta{
+          width: 220px;
+          height: 55px;
+          border-radius: 30px;
+          background-color: $dark-desaturated-blue-text-CTA-Bgd;
+          border: none;
+          color: $pale-blue-CTA-text;
+          font-size: 1.6rem;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
